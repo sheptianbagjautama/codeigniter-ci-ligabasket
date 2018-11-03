@@ -1,0 +1,48 @@
+<?php
+
+Class Topsis_model extends CI_Model {
+  public function get_data_kriteria(){
+    $stmt = $this->db->query("SELECT*FROM kriteria_topsis ORDER BY id_kriteria");
+    $stmt->execute();
+		return $stmt;
+  }
+  public function get_data_produk(){
+    $stmt = $this->db->query("SELECT*FROM produk_topsis ORDER BY id_produk");
+    $stmt->execute();
+    return $stmt;
+  }
+  public function get_data_kriteria_id($id){
+    $stmt = $this->db->query("SELECT*FROM kriteria_topsis WHERE id_kriteria='$id' ORDER BY id_kriteria");
+    $stmt->execute();
+		return $stmt;
+  }
+  public function get_data_nilai_id($id){
+    $stmt = $this->db->query("SELECT*FROM nilai_topsis WHERE id_produk='$id' ORDER BY id_kriteria");
+    $stmt->execute();
+    return $stmt;
+  }
+  public function pembagi($id){
+    $stmt = $this->db->query("SELECT nilai FROM nilai_topsis WHERE id_kriteria='$id'");
+    $stmt->execute();
+    $pembagi=0;
+    while ($data=$stmt->fetch(PDO::FETCH_ASSOC)) {
+      $pangkat=pow($data['nilai'],2);
+      $pembagi=$pembagi+$pangkat;
+    }
+    $hasil=sqrt($pembagi);
+    return $hasil;
+  }
+  public function insert_data_max_min($id_kriteria, $nilai){
+    $stmt = $this->db->query("INSERT INTO max_min_topsis (id_kriteria, nilai_max_min) VALUE ('$id_kriteria','$nilai')");
+    $stmt->execute();
+  }
+  public function delete_min_max(){
+    $stmt = $this->db->query("DELETE FROM max_min_topsis");
+    $stmt->execute();
+  }
+  public function min_max(){
+    $stmt = $this->db->query("SELECT id_kriteria, max(nilai_max_min) AS max, min(nilai_max_min) AS min FROM max_min_topsis GROUP BY id_kriteria ");
+    $stmt->execute();
+    return $stmt;
+  }
+}

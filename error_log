@@ -1,0 +1,7 @@
+[13-Aug-2018 03:41:23 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$queryInvoices' (T_VARIABLE) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 12
+[13-Aug-2018 03:41:56 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$queryInvoices' (T_VARIABLE) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 12
+[13-Aug-2018 03:43:50 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$queryInvoices' (T_VARIABLE) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 12
+[13-Aug-2018 03:44:44 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$queryInvoices' (T_VARIABLE) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 12
+[13-Aug-2018 03:47:26 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$queryInvoices' (T_VARIABLE) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 12
+[13-Aug-2018 03:47:30 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$queryInvoices' (T_VARIABLE) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 12
+[13-Aug-2018 04:05:04 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/beceerco/client/ligabasket/application/modules/api/models/Schedule_model.php on line 9
